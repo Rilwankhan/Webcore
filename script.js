@@ -304,7 +304,7 @@ function init() {
   var slide2 = new Slide(width, height, 'in');
   var l2 = new THREE.ImageLoader();
 	l2.setCrossOrigin('Anonymous');
-	slide2.setImage(l2.load('Webcore.png'));
+	slide2.setImage(l2.load('WebCore.png'));
   root.scene.add(slide2);
 
   var tl = new TimelineMax({repeat:-1, repeatDelay:1.0, yoyo: true});
