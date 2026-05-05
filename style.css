@@ -1,4 +1,4 @@
-﻿/* Webcore — Futuristic Neon Design System */
+/* Webcore — Futuristic Neon Design System */
 :root {
   --bg: hsl(240 20% 5%);
   --fg: hsl(210 40% 98%);
@@ -176,8 +176,9 @@ ul { list-style: none; }
 .logo-text { font-weight: 700; font-size: 1.25rem; letter-spacing: -.02em; }
 .logo-mark {
   width: 2.5rem; height: 2.5rem;
-  border-radius: 50%;
+  border-radius: .5rem;
   display: flex; align-items: center; justify-content: center;
+  object-fit: contain;
 }
 .logo-mark > span {
   width: 100%; height: 100%; border-radius: calc(.9rem - 2px);
@@ -207,8 +208,26 @@ ul { list-style: none; }
 }
 @media (min-width: 1024px) { .hero-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
 
-.hero-logo { display: flex; justify-content: center; order: 1; position: relative; }
+.hero-logo { display: flex; justify-content: center; align-items: center; order: 1; position: relative; }
 @media (min-width: 1024px) { .hero-logo { order: 2; justify-content: flex-end; } }
+
+#three-container {
+  width: min(550px, 90vw);
+  height: min(550px, 90vw);
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  #three-container {
+    width: 600px;
+    height: 600px;
+  }
+}
+#three-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
 .hero-logo-box {
   position: relative; padding: 2.5rem; text-align: center; border-radius: 1.5rem;
 }
@@ -998,3 +1017,7 @@ footer { position: relative; border-top: 1px solid hsl(0 0% 100% / .05); margin-
     .laptop-iframe { width: 100%; height: 100%; transform: none; }
   }
 }
+
+
+
+
